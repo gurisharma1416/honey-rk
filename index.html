@@ -12,9 +12,330 @@
    </head>
 
 <style>
-	.sec-nav-menu a {
-	   color: red;
-	}
+
+
+	* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.rkcontainer {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.sec-main-hero {
+  background-image: url("/assets/images/hero-bg.jpg");
+  width: 100%;
+  height: 500px;
+}
+.sec-main-hero .sec-nav-main {
+  background-color: white;
+  padding: 15px 35px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-logo {
+  width: 200px;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-logo img {
+  width: 100%;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu {
+  display: flex;
+  align-items: center;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu a:hover {
+  color: orange;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu a:not(:last-child) {
+  padding-right: 35px;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu .whatsapp-btn {
+  background-color: orange;
+  border: 2px solid orange;
+  padding: 10px;
+  font-size: 12px;
+  color: white;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu .whatsapp-btn:hover {
+  border: 2px solid orange;
+  color: orange;
+  background-color: transparent;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .nav-toggle-main {
+  display: none;
+}
+.sec-main-hero .sec-nav-main .sec-nav-flex .nav-toggle-main span {
+  font-size: 25px;
+}
+.sec-main-hero .sec-nav-main .sec-nav-menu-res {
+  display: none;
+}
+.sec-main-hero .sec-hero-text-main {
+  text-align: center;
+}
+.sec-main-hero .sec-hero-text-main h1 {
+  font-size: 60px;
+  padding-top: 170px;
+}
+
+.sec-benifit-main {
+  background-color: #ffecca;
+  background-image: url("/assets/images/hero-bg.jpg");
+  padding-top: 60px;
+}
+.sec-benifit-main .sec-benifit-main-inner .sec-benifit-head h2 {
+  font-size: 35px;
+  text-align: center;
+  color: #ed9100;
+  font-weight: 600;
+}
+.sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main .sec-benifit-img {
+  width: 30%;
+}
+.sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main .sec-benifit-img img {
+  width: 100%;
+}
+.sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main .sec-benifit-text {
+  width: 62%;
+  line-height: 36px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.sec-cont-form-main {
+  background-color: #ffecca;
+  padding-top: 105px;
+  padding-bottom: 35px;
+  background-image: url("/assets/images/hero-bg.jpg");
+}
+.sec-cont-form-main .sec-form-main {
+  margin: 0 auto;
+  position: relative;
+}
+.sec-cont-form-main .sec-form-main h1 {
+  font-size: 35px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #ed9100;
+  font-weight: 600;
+}
+.sec-cont-form-main #myForm-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.sec-cont-form-main label {
+  width: 7% !important;
+}
+.sec-cont-form-main input {
+  background-color: white;
+  width: 100%;
+  padding: 7px 0 !important;
+  border-radius: 5px;
+  border: 0;
+}
+.sec-cont-form-main textarea {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+.sec-cont-form-main .input-txt {
+  display: flex;
+  flex-direction: column;
+}
+.sec-cont-form-main .btn-sub {
+  background-color: #ffcd71;
+  /* width: 25%; */
+  padding: 13px 40px;
+  border-radius: 6px;
+  margin: 0 auto;
+  border: 0;
+  font-size: 17px;
+  cursor: pointer;
+}
+.sec-cont-form-main .btn-sub:hover {
+  background-color: orange;
+}
+.sec-cont-form-main .bee-img {
+  content: "";
+  position: absolute;
+  top: -11px;
+  width: 73px;
+  left: 385px;
+}
+.sec-cont-form-main .bee-imgg {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 73px;
+  left: 760px;
+}
+
+.rk-footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.rk-footer .footer-rk {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+.rk-footer .footer-rk p {
+  color: white;
+}
+.rk-footer .footer-rk a {
+  color: white;
+}
+
+.sec-map-main #sec-map {
+  width: 100%;
+  height: 200px;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .sec-main-hero {
+    background-image: url("/assets/images/hero-bg.jpg");
+    width: 100%;
+    height: 500px;
+  }
+  .sec-main-hero .sec-nav-main {
+    background-color: white;
+    padding: 15px 35px;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-logo {
+    width: 155px;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-logo img {
+    width: 100%;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu {
+    display: none;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu a:hover {
+    color: orange;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .sec-nav-menu a:not(:last-child) {
+    padding-right: 60px;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .nav-toggle-main {
+    display: block;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-flex .nav-toggle-main span {
+    font-size: 25px;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-menu-res {
+    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 55px;
+    padding: 0;
+    list-style: none;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-menu-res a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-menu-res a:hover {
+    color: orange;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-menu-res .whatsapp-btn {
+    background-color: orange;
+    padding: 14px;
+    font-size: 14px;
+    color: white;
+  }
+  .sec-main-hero .sec-nav-main .sec-nav-menu-res .whatsapp-btn:hover {
+    border: 2px solid orange;
+    color: orange;
+    background-color: transparent;
+  }
+  .sec-main-hero .sec-nav-main #myTopnav {
+    display: none;
+  }
+  .sec-main-hero .sec-hero-text-main {
+    text-align: center;
+  }
+  .sec-main-hero .sec-hero-text-main h1 {
+    font-size: 40px;
+    padding-top: 170px;
+  }
+}
+@media only screen and (max-width: 1023px) and (min-width: 320px) {
+  .sec-benifit-main .sec-benifit-main-inner .sec-benifit-head h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #ed9100;
+    font-weight: 600;
+  }
+  .sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+  .sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main .sec-benifit-img {
+    width: 60%;
+  }
+  .sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main .sec-benifit-img img {
+    width: 100%;
+  }
+  .sec-benifit-main .sec-benifit-main-inner .sec-benifit-flex-main .sec-benifit-text {
+    width: 100%;
+    line-height: 36px;
+    font-size: 18px;
+  }
+}
+#more {
+  display: none;
+}
+
+#read-more {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
+
+	
+	
 </style>
 	
 	
