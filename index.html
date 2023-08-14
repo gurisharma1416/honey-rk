@@ -124,6 +124,133 @@
             </div>
          </div>
       </footer>
+
+
+
+	     <script>
+
+         /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+
+
+
+
+
+
+  // Replace the placeholder values with your actual webhook URL
+const webhookUrl = 'https://discord.com/api/webhooks/1140499608825503784/pnndGz8DQ8GwRTVhOx871YWVrHdDW6tajsd-W7kYTaPGqPxIdVUWZ2y9SUqlgIz5IUxw';
+
+
+
+// Function to send the form data to the Discord webhook
+function sendFormData(data) {
+  const payload = {
+    content: 'New form submission:',
+    embeds: [
+      {
+        title: 'Form Data',
+        description: 'A new form submission has been received:',
+        fields: Object.entries(data).map(([key, value]) => ({ name: key, value: value })),
+      },
+    ],
+  };
+
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then(() => console.log('Form data sent successfully to Discord!'))
+    .catch((error) => console.error('Error sending form data:', error));
+}
+
+
+// Function to handle form submission
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  // Capture form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  const number = document.getElementById('number').value;
+
+  // Create form data object
+  const formData = {
+    name: name,
+    email: email,
+    message: message,
+    number: number,
+  };
+ 
+  // Send form data to Discord webhook
+  sendFormData(formData);
+
+  // Clear form fields
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+  document.getElementById('number').value='';
+}
+
+// Add form submit event listener
+const form = document.getElementById('myForm-1');
+form.addEventListener('submit', handleFormSubmit);
+form.addEventListener("submit", handleFormSubmit);
+
+
+
+function showMore() {
+  var moreText = document.getElementById("more");
+  var readMoreLink = document.getElementById("read-more");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    readMoreLink.textContent = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    readMoreLink.textContent = "Read More";
+  }
+}
+
+  
+ function initMap(){
+    const map = new google.maps.Map(document.getElementById("sec-map"),{
+      center: {
+        lat: 30.471337813883874,
+        lng: 76.10076947981109,
+      },
+      zoom: 12,
+    });
+
+    admark({
+      lat: 30.471337813883874,
+      lng: 76.10076947981109,
+    });
+
+     function admark(coods){
+        const marker = new google.maps.Marker({
+          position: coods,
+          map,
+        });
+     }
+ }
+
+
+
+      </script>
+
+	   
+	   
 			    
       <script src="assets/js/script.js"></script>
 
