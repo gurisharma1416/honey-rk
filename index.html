@@ -555,5 +555,32 @@ function showMore() {
 	   
 
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer ></script>
+
+	   <script>
+		    function initMap(){
+    const map = new google.maps.Map(document.getElementById("sec-map"),{
+      center: {
+        lat: 30.471337813883874,
+        lng: 76.10076947981109,
+      },
+      zoom: 12,
+    });
+
+    admark({
+      lat: 30.471337813883874,
+      lng: 76.10076947981109,
+    });
+
+     function admark(coods){
+        const marker = new google.maps.Marker({
+          position: coods,
+          map,
+        });
+     }
+ }
+
+	   </script>
+
+	   
    </body>
 </html>
